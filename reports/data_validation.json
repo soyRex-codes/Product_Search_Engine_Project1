@@ -1,0 +1,349 @@
+{
+  "environment": {
+    "python": "3.14.4",
+    "duckdb": "2.0.0",
+    "platform": "macOS-27.2-arm64-arm-64bit-Mach-O"
+  },
+  "source": {
+    "repository": "https://github.com/amazon-science/esci-data",
+    "commit": "7916cdf6ab75a462e77f20ab40428a10923998d5",
+    "files": [
+      {
+        "name": "shopping_queries_dataset_examples.parquet",
+        "bytes": 51286808,
+        "sha256": "4a735b693b4a424a6fc67f5be6e4c811495c488bbf66d02a602d308b2744263a"
+      },
+      {
+        "name": "shopping_queries_dataset_products.parquet",
+        "bytes": 1108857465,
+        "sha256": "25124442d064d64b26f74082d6fa09438d679efc0c183cf28d19064a2b65a265"
+      },
+      {
+        "name": "shopping_queries_dataset_sources.csv",
+        "bytes": 1682802,
+        "sha256": "a5fed8ecc016443de40bf3c63098f0e3f23bbe4daa4236f1c38b8c3184778c50"
+      }
+    ]
+  },
+  "schemas": {
+    "examples": [
+      {
+        "column_name": "example_id",
+        "column_type": "BIGINT",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "query",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "query_id",
+        "column_type": "BIGINT",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "product_id",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "product_locale",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "esci_label",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "small_version",
+        "column_type": "BIGINT",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "large_version",
+        "column_type": "BIGINT",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "split",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "__index_level_0__",
+        "column_type": "BIGINT",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      }
+    ],
+    "products": [
+      {
+        "column_name": "product_id",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "product_title",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "product_description",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "product_bullet_point",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "product_brand",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "product_color",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      },
+      {
+        "column_name": "product_locale",
+        "column_type": "VARCHAR",
+        "null": "YES",
+        "key": null,
+        "default": null,
+        "extra": null
+      }
+    ]
+  },
+  "sources": {
+    "rows": 130652,
+    "queries": 130652
+  },
+  "counts": {
+    "examples": 2621288,
+    "products": 1814924
+  },
+  "locales": [
+    {
+      "product_locale": "es",
+      "judgments": 356410
+    },
+    {
+      "product_locale": "jp",
+      "judgments": 446053
+    },
+    {
+      "product_locale": "us",
+      "judgments": 1818825
+    }
+  ],
+  "task1_us_splits": [
+    {
+      "split": "test",
+      "judgments": 181701,
+      "queries": 8956
+    },
+    {
+      "split": "train",
+      "judgments": 419653,
+      "queries": 20888
+    }
+  ],
+  "labels": [
+    {
+      "split": "test",
+      "esci_label": "C",
+      "judgments": 8099
+    },
+    {
+      "split": "test",
+      "esci_label": "E",
+      "judgments": 79708
+    },
+    {
+      "split": "test",
+      "esci_label": "I",
+      "judgments": 30331
+    },
+    {
+      "split": "test",
+      "esci_label": "S",
+      "judgments": 63563
+    },
+    {
+      "split": "train",
+      "esci_label": "C",
+      "judgments": 19090
+    },
+    {
+      "split": "train",
+      "esci_label": "E",
+      "judgments": 181819
+    },
+    {
+      "split": "train",
+      "esci_label": "I",
+      "judgments": 71116
+    },
+    {
+      "split": "train",
+      "esci_label": "S",
+      "judgments": 147628
+    }
+  ],
+  "checks": {
+    "duplicate_product_keys": 0,
+    "duplicate_example_ids": 0,
+    "duplicate_task1_pairs": 0,
+    "invalid_labels": 0,
+    "missing_task1_keys_or_query": 0,
+    "query_ids_across_splits": 0,
+    "query_texts_across_splits": 0,
+    "inconsistent_query_text": 0,
+    "unmatched_products_all_examples": 0,
+    "join_row_count_difference": 0
+  },
+  "pools_over_40": [
+    {
+      "split": "test",
+      "queries": 198,
+      "max_candidates": 95
+    },
+    {
+      "split": "train",
+      "queries": 475,
+      "max_candidates": 188
+    }
+  ],
+  "largest_pools": [
+    {
+      "split": "train",
+      "query_id": 7534,
+      "query": "airpods",
+      "candidates": 188
+    },
+    {
+      "split": "train",
+      "query_id": 83411,
+      "query": "printer",
+      "candidates": 136
+    },
+    {
+      "split": "train",
+      "query_id": 39158,
+      "query": "face mask",
+      "candidates": 109
+    },
+    {
+      "split": "train",
+      "query_id": 9891,
+      "query": "apple watch series 3",
+      "candidates": 98
+    },
+    {
+      "split": "test",
+      "query_id": 58186,
+      "query": "kindle",
+      "candidates": 95
+    }
+  ],
+  "missing_text": {
+    "product_title": 0,
+    "product_bullet_point": 70128,
+    "product_description": 300245,
+    "product_brand": 29650,
+    "product_color": 184947
+  },
+  "candidate_pools": [
+    {
+      "split": "test",
+      "min_candidates": 8,
+      "max_candidates": 95,
+      "mean_candidates": 20.288186690486825,
+      "queries_without_exact": 1,
+      "queries_without_positive": 0
+    },
+    {
+      "split": "train",
+      "min_candidates": 8,
+      "max_candidates": 188,
+      "mean_candidates": 20.09062619685944,
+      "queries_without_exact": 0,
+      "queries_without_positive": 0
+    }
+  ],
+  "samples": {
+    "seed": 42,
+    "selection": "order query IDs by md5('42:' + query_id)",
+    "bullet_character_limit": 1000,
+    "development": {
+      "judgments": 4929,
+      "queries": 250
+    },
+    "evaluation": {
+      "judgments": 19815,
+      "queries": 1000
+    }
+  },
+  "smoke_test": {
+    "method": "BM25 with pool-local document frequencies; development only; not final retrieval benchmark",
+    "queries": 250,
+    "queries_with_positive_gain": 250,
+    "mean_ndcg_at_10": 0.7034254138928783,
+    "median_scoring_ms": 0.032687472412362695,
+    "latency_scope": "Only BM25 scoring and sorting; excludes tokenization, indexing, model inference and I/O"
+  },
+  "elapsed_seconds": 6.7360200000111945
+}
